@@ -1,0 +1,32 @@
+{
+  "name": "@quimikuaxh/pokemon",
+  "version": "1.0.0",
+  "description": "Library to get Pokémon info from PokéAPI easily",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm i && tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist && npm pack",
+    "clean": "rm -rf node_modules dist package-lock.json || true",
+    "clean-build": "npm run clean && npm run build",
+    "lint": "eslint . --ext .ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "quimikuaxh",
+  "license": "ISC",
+  "files": [
+    "dist/*"
+  ],
+  "dependencies": {
+    "@quimikuaxh/common": "0.0.1",
+    "@types/node": "20.8.9",
+    "@typescript-eslint/eslint-plugin": "6.9.0",
+    "@typescript-eslint/parser": "6.9.0",
+    "axios": "1.6.0",
+    "eslint": "8.52.0",
+    "ts-node": "10.9.1",
+    "tscpaths": "0.0.9"
+  },
+  "devDependencies": {
+    "tsconfig-paths": "4.2.0"
+  }
+}
